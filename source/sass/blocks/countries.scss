@@ -1,0 +1,430 @@
+.countries__list {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 15px;
+  margin: 0;
+  margin-bottom: 78px;
+  display: flex;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 915px;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($dark, 0.3);
+  }
+}
+
+.countries__element {
+  margin-right: 97px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.countries__button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba($dark, 0.3);
+
+  &:hover,
+  &:focus {
+    color: $coral;
+  }
+
+  &:active {
+    color: $orange;
+  }
+}
+
+.countries__button--active {
+  color: $coral;
+}
+
+.countries__slide {
+  display: none;
+
+  .container {
+    min-height: 596px;
+    background-image: url('../img/photo-greece@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: 470px 5px;
+    background-size: 430px 596px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-greece@2x.jpg');
+    }
+  }
+}
+
+.countries__slide--active {
+  display: block;
+}
+
+.countries__albania {
+  .container {
+    background-image: url('../img/photo-albania@1x.jpg');
+    background-position: 490px 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-albania@2x.jpg');
+    }
+  }
+}
+
+.countries__macedonia {
+  .container {
+    background-image: url('../img/photo-macedonia@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-albania@2x.jpg');
+    }
+  }
+}
+
+.countries__montenegro {
+  .container {
+    background-image: url('../img/photo-montenegro@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-albania@2x.jpg');
+    }
+  }
+}
+
+.countries__croatia {
+  .container {
+    background-image: url('../img/photo-croatia@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-albania@2x.jpg');
+    }
+  }
+}
+
+
+.countries__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 175px;
+    height: 3px;
+    bottom: -18px;
+    left: 0;
+    background-color: $coral;
+  }
+}
+
+.countries__wrapper {
+  max-width: 390px;
+}
+
+.countries__description {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba($dark, 0.7);
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+}
+
+.countries__buy {
+  background-color: $coral;
+  color: $white;
+  border: 0;
+  padding: 30px 40px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+  }
+
+  &:active {
+    background-color: $coral;
+  }
+}
+
+.countries__review-wrapper {
+  max-width: 382px;
+  background-color: $white;
+  padding: 30px;
+}
+
+.countries__reviews {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 68px;
+    height: 1px;
+    bottom: -12px;
+    left: 0;
+    background-color: $coral;
+  }
+}
+
+.countries__review-text {
+  font-size: 14px;
+  line-height: 28px;
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+.countries__author-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.countries__review-avatar {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.countries__review-author {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .countries {
+    margin-top: 2px;
+
+  }
+
+  .countries__list {
+    margin-bottom: 32px;
+    margin-left: 13px;
+  }
+
+  .countries__title {
+    margin-bottom: 22px;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .countries__wrapper {
+    max-width: 100%;
+  }
+
+  .countries__description {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .countries__buy {
+    display: block;
+    padding: 19px 52px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+
+    &:active {
+      background-color: $orange;
+    }
+  }
+
+  .countries__slide {
+    background-image: url('../img/photo-greece-tablet@1x.jpg');
+    background-position: center 335px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-greece-tablet@2x.jpg');
+      background-size: auto 415px;
+    }
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+      background: 0;
+    }
+  }
+
+  .countries__albania {
+    background-image: url('../img/photo-albania-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-albania-tablet@2x.jpg');
+    }
+  }
+
+  .countries__macedonia {
+    background-image: url('../img/photo-macedonia-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-macedonia-tablet@2x.jpg');
+    }
+  }
+
+  .countries__montenegro {
+    background-image: url('../img/photo-montenegro-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-montenegro-tablet@2x.jpg');
+    }
+  }
+
+  .countries__croatia {
+    background-image: url('../img/photo-croatia-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-croatia-tablet@2x.jpg');
+    }
+  }
+
+  .countries__reviews {
+    margin-bottom: 34px;
+  }
+
+  .countries__review-text {
+    margin-bottom: 30px;
+    letter-spacing: -0.4px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .countries {
+    margin-top: 41px;
+  }
+
+  .countries__title {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
+  .countries__buy {
+    padding: 19px 72px;
+    margin-bottom: 100px;
+  }
+
+  .countries__slide {
+    background-position: center 568px;
+    background-size: auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-greece-tablet@2x.jpg');
+      background-size: auto 415px;
+    }
+  }
+
+  .countries__albania {
+    background-image: url('../img/photo-albania-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-albania-tablet@2x.jpg');
+    }
+  }
+
+  .countries__macedonia {
+    background-image: url('../img/photo-macedonia-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-macedonia-tablet@2x.jpg');
+    }
+  }
+
+  .countries__montenegro {
+    background-image: url('../img/photo-montenegro-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-montenegro-tablet@2x.jpg');
+    }
+  }
+
+  .countries__croatia {
+    background-image: url('../img/photo-croatia-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/photo-croatia-tablet@2x.jpg');
+    }
+  }
+
+  .countries__reviews {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    &::after {
+      left: 85px;
+    }
+  }
+
+  .countries__list {
+    margin-bottom: 24px;
+    margin-left: 5px;
+  }
+
+  .countries__description {
+    max-width: 288px;
+  }
+
+  .countries__review-text {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .countries__review-wrapper {
+    max-width: 268px;
+    padding: 30px 20px;
+  }
+
+  .countries__author-wrapper {
+    flex-direction: column;
+  }
+
+  .countries__review-avatar {
+    margin-right: 0;
+  }
+
+  .countries__review-author {
+    margin-top: 12px;
+    margin-left: 10px;
+  }
+}

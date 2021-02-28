@@ -1,0 +1,145 @@
+.intro {
+  background-image: url('../img/bg-mountines-desktop@1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 860px;
+  margin: 0;
+  color: $white;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/bg-mountines-desktop@2x.jpg');
+  }
+}
+
+.intro__wrapper {
+  margin-left: auto;
+  margin-right: 57px;
+  max-width: 412px;
+  padding-top: 185px;
+}
+
+.intro__title {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  margin: 0;
+  margin-bottom: 29px;
+  letter-spacing: -1px;
+}
+
+.intro__description {
+  font-size: 16px;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 61px;
+}
+
+.intro__link {
+  margin: 0;
+  margin-top: 39px;
+  background-color: $coral;
+  padding: 30px;
+  padding-left: 40px;
+  padding-right: 179px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+
+  &:hover {
+    background-color: $orange;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 40px;
+    top: 31px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .intro {
+    min-height: 344px;
+  }
+
+  .intro__wrapper {
+    margin: 0 auto;
+    max-width: 420px;
+    padding-top: 60px;
+  }
+
+  .intro__title {
+    font-size: 30px;
+    line-height: 45px;
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 16px;
+  }
+
+  .intro__description {
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .intro__link {
+    display: block;
+    margin: 0 auto;
+    padding: 19px;
+    padding-left: 40px;
+    max-width: 250px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+
+    &:active {
+      background-color: $orange;
+    }
+
+    &::after {
+      top: 18px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .intro {
+    background-position: top;
+    max-height: auto;
+    background-size: auto 235px;
+  }
+
+  .intro__wrapper {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .intro__title {
+    font-size: 24px;
+    line-height: 36px;
+    padding-top: 81px;
+    margin: 0 auto;
+    max-width: 280px;
+    margin-bottom: 102px;
+    text-align: center;
+  }
+
+  .intro__description {
+    color: $darkest;
+    letter-spacing: -0.5px;
+    margin-bottom: 21px;
+  }
+
+  .intro__link {
+    max-width: 288px;
+  }
+}

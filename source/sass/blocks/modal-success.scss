@@ -1,0 +1,22 @@
+.modal-success {
+  width: 728px;
+  height: 444px;
+  background-color: $grey;
+  position: relative;
+}
+
+.modal-success__title {
+  text-align: center;
+  margin-top: 179px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+}
+
+@media(max-width: $mobile-width-only) {
+  .modal-success {
+    width: auto;
+    height: auto;
+    background-color: $white;
+  }
+}

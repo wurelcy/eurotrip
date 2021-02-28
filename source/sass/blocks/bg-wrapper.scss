@@ -1,0 +1,12 @@
+.bg-wrapper {
+  overflow-x: hidden;
+  background-image: url('../img/bg.svg');
+  background-repeat: no-repeat;
+  background-position: center 120px;
+}
+
+@media (max-width: $tablet-width) {
+  .bg-wrapper {
+    background-image: none;
+  }
+}

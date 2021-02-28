@@ -1,0 +1,122 @@
+.modal-buy {
+  width: 728px;
+  height: 444px;
+  background-color: $grey;
+  background-image: url('../img/photo-buy@1x.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/photo-buy@2x.jpg');
+    background-size: auto 444px;
+  }
+}
+
+.modal-buy__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 61px;
+  max-width: 270px;
+}
+
+.modal-buy__submit {
+  display: block;
+  margin: auto;
+}
+
+.modal-buy__title {
+  margin-top: 72px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+}
+
+.modal-buy__number,
+.modal-buy__email {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal-buy__number {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '*';
+    width: 6px;
+    height: 6px;
+    color: $coral;
+    top: 10px;
+    left: 15px;
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+.modal-buy__your-number,
+.modal-buy__your-email {
+  border: 1px solid rgba($dark, 0.3);
+  height: 50px;
+  padding: 14px;
+  padding-left: 15px;
+  min-width: 269px;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark;
+  }
+}
+
+.modal-buy__your-number {
+  margin-right: 19px;
+  padding-left: 26px;
+}
+
+.modal-buy__submit {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  background-color: $coral;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border: 0;
+  color: $white;
+  padding: 18px 39px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media(max-width: $mobile-width-only) {
+  .modal-buy {
+    width: auto;
+    height: auto;
+    background-color: $white;
+    background-image: none;
+  }
+
+  .modal-buy__wrapper {
+    margin: auto;
+    max-width: 288px;
+  }
+
+  .modal-buy__title {
+    margin-top: 100px;
+  }
+
+  .modal-buy__submit {
+    font-size: 10px;
+    line-height: 12px;
+    border: 0;
+    color: $white;
+    min-width: 100%;
+  }
+
+  .modal-buy__your-number,
+  .modal-buy__your-email {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,41 @@
+.corporative-travel {
+  max-width: 320px;
+  margin-left: 92px;
+}
+
+.corporative-travel__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.corporative-travel__description {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba($darkest, 0.5);
+}
+
+@media (max-width: $tablet-width) {
+  .corporative-travel {
+    max-width: 100%;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: $darkgrey;
+      top: -30px;
+      left: 0;
+    }
+  }
+}

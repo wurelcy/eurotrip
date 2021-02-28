@@ -1,0 +1,112 @@
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  margin-left: 623px;
+  padding: 0;
+  display: flex;
+}
+
+.main-nav__item {
+  margin-right: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  &:hover {
+    color: $coral;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav__toggle {
+    margin: 0;
+    display: block;
+    border: 0;
+    background-color: $coral;
+    width: 72px;
+    height: 50px;
+    background-image: url('../img/icon-menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-nav__list {
+    margin: 0;
+    margin-top: 134px;
+    flex-direction: column;
+  }
+
+  .main-nav__item {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    background-color: $grey;
+    padding: 17px 35px 17px 16px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 17px;
+      top: 23px;
+      right: 25px;
+      background-image: url('../img/icon-arrow-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .main-nav--closed {
+    .main-nav__list {
+      display: none;
+    }
+  }
+
+  .main-nav--nojs {
+    min-width: 100%;
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__list {
+      display: block;
+      margin-top: 10px;
+      position: static;
+    }
+  }
+
+  .main-nav--opened {
+    display: block;
+    position: fixed;
+    background-color: white;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+
+    .main-nav__toggle {
+      margin: 0;
+      margin-left: auto;
+      background: transparent;
+      width: 50px;
+      height: 52px;
+      background-image: url('../img/icon-cross.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav__toggle {
+    width: 50px;
+    height: 50px;
+  }
+}
